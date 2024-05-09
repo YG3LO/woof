@@ -63,9 +63,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-/**
- * Composable that displays an app bar and a list of dogs.
- */
+// displays app bar and list dogs
 @Composable
 fun WoofApp() {
     Scaffold(
@@ -84,12 +82,8 @@ fun WoofApp() {
     }
 }
 
-/**
- * Composable that displays a list item containing a dog icon and their information.
- *
- * @param dog contains the data that populates the list item
- * @param modifier modifiers to set to this composable
- */
+//list dog icon and info
+
 @Composable
 fun DogItem(
     dog: Dog,
@@ -135,14 +129,7 @@ fun DogItem(
     }
 }
 
-/**
- * Composable that displays a button that is clickable and displays an expand more or an expand less
- * icon.
- *
- * @param expanded represents whether the expand more or expand less icon is visible
- * @param onClick is the action that happens when the button is clicked
- * @param modifier modifiers to set to this composable
- */
+//clickable
 @Composable
 private fun DogItemButton(
     expanded: Boolean,
@@ -161,11 +148,6 @@ private fun DogItemButton(
     }
 }
 
-/**
- * Composable that displays a Top Bar with an icon and text.
- *
- * @param modifier modifiers to set to this composable
- */
 @Composable
 fun WoofTopAppBar(modifier: Modifier = Modifier) {
     CenterAlignedTopAppBar(
@@ -179,10 +161,6 @@ fun WoofTopAppBar(modifier: Modifier = Modifier) {
                         .padding(dimensionResource(R.dimen.padding_small)),
                     painter = painterResource(R.drawable.ic_woof_logo),
 
-                    // Content Description is not needed here - image is decorative, and setting a
-                    // null content description allows accessibility services to skip this element
-                    // during navigation.
-
                     contentDescription = null
                 )
                 Text(
@@ -195,12 +173,7 @@ fun WoofTopAppBar(modifier: Modifier = Modifier) {
     )
 }
 
-/**
- * Composable that displays a photo of a dog.
- *
- * @param dogIcon is the resource ID for the image of the dog
- * @param modifier modifiers to set to this composable
- */
+//display dog
 @Composable
 fun DogIcon(
     @DrawableRes dogIcon: Int,
@@ -221,13 +194,7 @@ fun DogIcon(
     )
 }
 
-/**
- * Composable that displays a dog's name and age.
- *
- * @param dogName is the resource ID for the string of the dog's name
- * @param dogAge is the Int that represents the dog's age
- * @param modifier modifiers to set to this composable
- */
+//name and age
 @Composable
 fun DogInformation(
     @StringRes dogName: Int,
@@ -247,12 +214,7 @@ fun DogInformation(
     }
 }
 
-/**
- * Composable that displays a dog's hobbies.
- *
- * @param dogHobby is the resource ID for the text string of the hobby to display
- * @param modifier modifiers to set to this composable
- */
+//hobies
 @Composable
 fun DogHobby(
     @StringRes dogHobby: Int,
@@ -272,9 +234,7 @@ fun DogHobby(
     }
 }
 
-/**
- * Composable that displays what the UI of the app looks like in light theme in the design tab.
- */
+
 @Preview
 @Composable
 fun WoofPreview() {
@@ -283,9 +243,6 @@ fun WoofPreview() {
     }
 }
 
-/**
- * Composable that displays what the UI of the app looks like in dark theme in the design tab.
- */
 @Preview
 @Composable
 fun WoofDarkThemePreview() {
